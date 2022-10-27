@@ -1,9 +1,16 @@
 package com.kuma.owspacekt.view.widget
 
 import android.content.Context
+import android.util.AttributeSet
 import android.view.ViewGroup
 
 class VerticalViewPager(context: Context) : ViewGroup(context) {
+    init {
+        initViewPager()
+    }
+
+    constructor(context: Context, attrs: AttributeSet) : this(context)
+
     private var mDefaultGutterSize = 0
 
     internal class ItemInfo {
