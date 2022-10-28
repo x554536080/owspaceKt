@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.MainActivity">
 
-<com.kuma.owspacekt.view.widget.VerticalViewPager
+<com.kuma.owspacekt.view.widget.VerticalViewPagerHandWritten
     android:id="@+id/view_pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
-<RelativeLayout
-    android:layout_width=""
-    android:layout_height="">
+<!--<RelativeLayout-->
+<!--    android:layout_width=""-->
+<!--    android:layout_height="">-->
 
-</RelativeLayout>
+<!--</RelativeLayout>-->
 </FrameLayout>
 
