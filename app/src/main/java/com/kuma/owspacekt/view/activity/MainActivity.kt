@@ -25,3 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+//github开源客户端
+//https://www.jianshu.com/p/010545ecf472
+//https://gitee.com/thirtydegreesray/OpenHub/
