@@ -26,7 +26,7 @@ import androidx.viewpager.widget.ViewPager
 import java.lang.reflect.Method
 import java.util.*
 
-//todo 笔记3，直接使用原项目的代码没有手写，然后就是改了包引用再convert和convert后再改引用不知道有什么区别，然后就是即使改引用后convert还是有个提示other修改不知道是什么，然后自动转kotlin后还是有一些问题然后改了一下，然后还有什么来着......
+//todo note 直接使用原项目的代码没有手写，然后就是改了包引用再convert和convert后再改引用不知道有什么区别，然后就是即使改引用后convert还是有个提示other修改不知道是什么，然后自动转kotlin后还是有一些问题然后改了一下，然后还有什么来着......
 
 /**
  * Created by Mr.Yangxiufeng
