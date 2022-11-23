@@ -1,0 +1,10 @@
+kind: pipeline
+name: test
+
+steps:
+- name: test
+  image: gradle:jdk11
+  commands:
+  - chmod +x gradlew
+  - ./gradlew assembleDebug
+#test
