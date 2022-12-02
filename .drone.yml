@@ -7,3 +7,4 @@ steps:
   commands:
   - chmod +x gradlew
   - ./gradlew assembleDebug
+#重新全部绑定
