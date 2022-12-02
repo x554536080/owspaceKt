@@ -7,4 +7,3 @@ steps:
   commands:
   - chmod +x gradlew
   - ./gradlew assembleDebug
-#切回github
