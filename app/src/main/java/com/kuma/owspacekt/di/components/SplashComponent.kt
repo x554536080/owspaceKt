@@ -4,4 +4,5 @@ import com.kuma.owspacekt.view.activity.SplashActivity
 
 interface SplashComponent {
     fun inject(splashActivity: SplashActivity)
+    //test push
 }
