@@ -43,7 +43,7 @@ dependencies {
 
     implementation(fileTree("libs"))
 //    implementation(name: 'SlidingMenulibrary-release', ext: 'aar')
-    //todo note 这个引用方式两个问题 1是添加flatDir后Sycn会出问题 2是修改了两个gradle文件后问题没了但代码里还是引用不了这个类
+    //todo note 这个引用方式两个问题 1是添加flatDir后Sync会出问题 2是修改了两个gradle文件后问题没了但代码里还是引用不了这个类
 
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'

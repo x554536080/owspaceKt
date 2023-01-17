@@ -1,10 +1,9 @@
 kind: pipeline
-name: test
+name: drone ci
 
 steps:
-- name: test
-  image: gradle:jdk11
+- name: gradle-build
+  image: x554536080/android_build:0.1
   commands:
   - chmod +x gradlew
   - ./gradlew assembleDebug
-#重新全部绑定
