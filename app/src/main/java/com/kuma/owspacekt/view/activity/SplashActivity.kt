@@ -9,21 +9,21 @@ import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import butterknife.ButterKnife
 import com.kuma.owspacekt.R
+import com.kuma.owspacekt.app.OwspaceApplication
+import com.kuma.owspacekt.di.components.DaggerSplashComponent
+import com.kuma.owspacekt.di.modules.SplashModule
 import com.kuma.owspacekt.presenter.SplashContract
 import com.kuma.owspacekt.presenter.SplashPresenter
+import com.kuma.owspacekt.util.AppUtil
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 import javax.inject.Inject
 
 class SplashActivity : BaseActivity(), SplashContract.View, EasyPermissions.PermissionCallbacks {
     //todo note kotlin里面怎么写是最好的。只是采取了这种写法试着写一下
-    @Inject
+//    @Inject
     var presenter: SplashPresenter? = null
 
-
-    companion object {
-        private const val PERMISSION_REQUEST_CODE = 1
-    }
 
     protected val needPermissions = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -34,7 +34,10 @@ class SplashActivity : BaseActivity(), SplashContract.View, EasyPermissions.Perm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        DaggerSplashComponent.builder()
+            .netComponent(OwspaceApplication.get(this).getNetComponent())//为啥不能.访问啊 这都咋还不知道啊
+            .splashModule(SplashModule(this))
+            .build().inject(this)
     }
 
     override fun onStart() {
@@ -71,6 +74,10 @@ class SplashActivity : BaseActivity(), SplashContract.View, EasyPermissions.Perm
         } else {
             setContentView(R.layout.activity_splash)
             ButterKnife.bind(this@SplashActivity)
+            delaySplash()
+            val deviceId = AppUtil.getDeviceId(this)
+            presenter!!.getSplash(deviceId)
+
 
         }
     }
@@ -98,5 +105,9 @@ class SplashActivity : BaseActivity(), SplashContract.View, EasyPermissions.Perm
         val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
         intent.data = Uri.parse("package:$packageName")
         startActivity(intent)
+    }
+
+    companion object {
+        private const val PERMISSION_REQUEST_CODE = 1
     }
 }
