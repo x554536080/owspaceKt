@@ -30,6 +30,10 @@ class OwspaceApplication : Application() {
         netComponent = DaggerNetComponent.builder()
             .netModule(NetModule())//1 为啥这里DNC是构建好的，SA里面DSC没有这个类 2Module的方法废弃了最新怎么用
             .build()
+
+
+        //其实某种角度来说还不是很清楚把这个实例放在application里面的原因
+
     }
 
     fun getNetComponent(): NetComponent {
