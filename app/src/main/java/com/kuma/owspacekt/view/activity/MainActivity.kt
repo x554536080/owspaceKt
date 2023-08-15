@@ -6,7 +6,7 @@ import butterknife.ButterKnife
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu
 import com.kuma.owspacekt.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var slidingMenu: SlidingMenu
 

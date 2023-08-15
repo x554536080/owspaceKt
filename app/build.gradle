@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -46,15 +47,20 @@ dependencies {
     //todo note 这个引用方式两个问题 1是添加flatDir后Sync会出问题 2是修改了两个gradle文件后问题没了但代码里还是引用不了这个类
 
     implementation 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'net.danlew:android.joda:2.9.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'io.reactivex:rxjava:1.2.1'
+    implementation 'com.orhanobut:logger:2.1.1'
     implementation 'pub.devrel:easypermissions:0.3.0'
-    implementation 'com.google.dagger:dagger:2.14.1'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
+    implementation 'com.google.dagger:dagger:2.12'
+    kapt 'com.google.dagger:dagger-compiler:2.12'
     //字体
     implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
 }

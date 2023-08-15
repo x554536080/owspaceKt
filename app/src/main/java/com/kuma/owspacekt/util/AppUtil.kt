@@ -9,7 +9,15 @@ class AppUtil {
     companion object {
         fun getDeviceId(context: Context): String {
             val tm = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-            return tm.deviceId//todo note 好像说是这玩意儿android10不能用？
+            //no to do note 好像说是这玩意儿android10不能用？
+            //找到这个 就用呗
+            if (tm.deviceId == null) {
+                //android.provider.Settings;
+                val deviceId =
+                    Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID);
+                return deviceId
+            }
+            return tm.deviceId
         }
 
         //todo note 自己添加的方法

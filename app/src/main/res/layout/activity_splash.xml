@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.activity.SplashActivity">
+    android:layout_height="match_parent">
+    <!--    android:orientation="vertical"-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--     使用scrollView目的是为了不同尺寸屏幕适配吗-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <com.kuma.owspacekt.view.widget.FixedImageView
+            android:id="@+id/splash_img"
+            android:layout_width="480dp"
+            android:layout_height="640dp"
+            android:scaleType="centerCrop" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/weread_logo_iv"
+        android:src="@drawable/welcome_weread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="160dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weread_logo_iv"
+        android:layout_marginTop="171dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/weread_signature"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/publish_logo_iv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="35.0dip"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/icon_xiaomi_welcome"-->
+<!--        android:visibility="invisible" />-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_owspace"
+        />
+
+</RelativeLayout>

@@ -12,6 +12,7 @@ open class BaseActivity:AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context?) {
         //todo note 虽然不知道是什么原理，但就先这么用吧
+        //todo note 字体的库
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 }
