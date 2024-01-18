@@ -3,16 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#123"
     tools:context=".view.activity.MainActivity">
 
-<com.kuma.owspacekt.view.widget.VerticalViewPagerHandWritten
-    android:id="@+id/view_pager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-<!--<RelativeLayout-->
-<!--    android:layout_width=""-->
-<!--    android:layout_height="">-->
+    <com.kuma.owspacekt.view.widget.VerticalViewPagerJ
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-<!--</RelativeLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/left_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/column" />
+
+        <ImageView
+            android:id="@+id/right_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="单  读"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
 </FrameLayout>
 

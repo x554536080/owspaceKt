@@ -11,7 +11,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
@@ -26,9 +25,7 @@ import com.kuma.owspacekt.presenter.SplashContract
 import com.kuma.owspacekt.presenter.SplashPresenter
 import com.kuma.owspacekt.util.AppUtil
 import com.kuma.owspacekt.util.FileUtil
-import com.kuma.owspacekt.view.widget.FixedImageView
 import com.orhanobut.logger.Logger
-import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 import java.io.File
 import java.io.FileInputStream

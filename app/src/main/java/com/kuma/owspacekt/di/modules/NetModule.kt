@@ -36,7 +36,7 @@ class NetModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         val retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("http://static.owsapce.com/")
+            .baseUrl("http://static.owspace.com/")
             .addConverterFactory(StringConverterFactory.create())//todo
             .addConverterFactory(GsonConverterFactory.create(EntityUtils.gson))//todo
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

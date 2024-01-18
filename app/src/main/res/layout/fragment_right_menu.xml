@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/theme_bg_color_black"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/slide_close"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:scaleType="center"
+        android:clickable="true"
+        android:src="@drawable/fork"
+        android:layout_alignParentLeft="true"/>
+<!--    要这个clickable有什么用-->
+    <ImageView
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/setting"
+        android:scaleType="center"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/setting"/>
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/user_ll"
+    android:layout_marginTop="70dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/avatar_iv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/avater_default"/>
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginTop="25dp" android:textSize="14sp"/>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+</RelativeLayout>
